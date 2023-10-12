@@ -41,6 +41,7 @@ $dir = dirname(__DIR__);
 $files = [
     "{$dir}/.github/workflows/ci.yml",
     "{$dir}/composer.json",
+    "{$dir}/docs/_bookdown.json",
     "{$dir}/phpunit.xml",
 ];
 

@@ -1,0 +1,6 @@
+{
+    "title": "{VENDOR}/{PACKAGE}",
+    "content": [
+        "overview.md",
+    ]
+}
