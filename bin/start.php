@@ -9,7 +9,7 @@ if ($argc < 2) {
         php bin/start.php <vendor> <package> <namespace>
 
     EXAMPLE:
-        php bin/start.php myvendor mypackage MyNamespace
+        php bin/start.php my-vendor my-package MyVendor\\\\MyPackage
 
 
     HELP;
@@ -33,7 +33,7 @@ if (! $package) {
 $namespace = $argv[3] ?? null;
 
 if (! $namespace) {
-    echo "Please pass a 'namespace' as the second argument." . PHP_EOL;
+    echo "Please pass a 'namespace' as the third argument." . PHP_EOL;
     exit(1);
 }
 
@@ -53,7 +53,7 @@ foreach ($files as $file) {
         [
             '{VENDOR}' => $vendor,
             '{PACKAGE}' => $package,
-            '{NAMESPACE}' => $namespace
+            '{NAMESPACE}' => str_replace('\\', '\\\\', $namespace)
         ],
     );
     file_put_contents($file, $text);
