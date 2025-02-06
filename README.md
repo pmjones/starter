@@ -14,4 +14,8 @@ Then issue the following command ...
 php bin/start.sh $VENDOR $PACKAGE $NAMESPACE
 ```
 
-... replacing the variables with your chosen values.
+... replacing the variables with your chosen values. For example:
+
+```
+php bin/start.sh vendor-name package-name VendorName\\PackageName
+```
