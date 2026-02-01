@@ -11,7 +11,7 @@
             "email": "pmjones@pmjones.io",
             "homepage": "https://pmjones.io",
             "role": "Lead"
-        },
+        }
     ],
     "require": {
         "php": "^8.4"
@@ -25,8 +25,7 @@
         "pds/composer-script-names": "^1.0",
         "pds/skeleton": "^1.0",
         "phpstan/phpstan": "^2.0",
-        "phpunit/phpunit": "^11.0",
-        "pmjones/php-styler": "0.x-dev"
+        "phpunit/phpunit": "^11.0"
     },
     "autoload-dev": {
         "psr-4" : {
@@ -35,9 +34,7 @@
     },
     "scripts": {
         "analyze": "./vendor/bin/phpstan",
-        "check": "composer test && composer analyze && composer cs-check",
-        "cs-check": "./vendor/bin/php-styler check",
-        "cs-fix": "./vendor/bin/php-styler apply",
+        "check": "composer test && composer analyze",
         "test": "./vendor/bin/phpunit",
         "test-coverage": "./vendor/bin/phpunit --coverage-html=./tmp/coverage"
     }
